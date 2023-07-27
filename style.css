@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'montserrat';
+  color: white;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#nav {
+  height: 145px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 150px;
+  gap: 50px;
+  justify-content: flex-start;
+  position: fixed;
+  z-index: 99;
+}
+video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: fixed;
+  z-index: -1;
+}
+
+#nav > img {
+  height: 75px;
+}
+
+#nav > h4 {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+#nav > img {
+  height: 75px;
+}
+#cursor {
+  height: 20px;
+  width: 20px;
+  background-color: #95c11e;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 99;
+}
+#cursor-blur {
+  height: 400px;
+  width: 400px;
+  background-color: #96c11e2b;
+  border-radius: 50%;
+  position: fixed;
+  filter: blur(40px);
+  z-index: 9;
+}
+#main {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.37);
+}
+
+#page1 {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  z-index: 10;
+}
+
+#page1 > h1 {
+  font-size: 80px;
+  font-weight: 900;
+}
+#page1 > h1:before {
+  content: '';
+  position: absolute;
+  color: #000;
+  top: -4px;
+  left: -4px;
+  -webkit-text-stroke: 2px #95c11e;
+}
+#page1 > h2 {
+  font-size: 27px;
+  font-weight: 800;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+#page1 > p {
+  font-size: 20px;
+  font-weight: 500;
+  line-break: loose;
+}
+
+#page2 {
+  height: 100vh;
+  width: 100%;
+  z-index: 10;
+}
+
+#scroller {
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  z-index: 10;
+}
+
+#scroller::-webkit-scrollbar{
+  display: none;
+}
+
+#scroller-in {
+  display: inline-block;
+  white-space: nowrap;
+  animation-name: scroll;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+#scroller h4 {
+  display: inline-block;
+  font-size: 120px;
+  font-weight: 900;
+  font-family: gilroy;
+  margin-right: 10px;
+  -webkit-text-stroke: 2px #95c11e;
+  color: transparent;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100px);
+  }
+}
